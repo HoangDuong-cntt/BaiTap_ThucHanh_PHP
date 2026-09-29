@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8 - Form Nhập Thông Tin Khách Hàng</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding-top: 20px; }
+        fieldset { width: 450px; margin: 0 auto; background-color: #fff; border: 1px solid #aaa; padding: 15px 20px; }
+        legend { font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 6px 0; vertical-align: top; }
+        input[type="text"], select, textarea { width: 90%; padding: 4px; border: 1px solid #ccc; border-radius: 3px; }
+        input[type="submit"], input[type="reset"] { padding: 4px 15px; cursor: pointer; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <form action="config.php" method="post" name="form_info">
+        <fieldset>
+            <legend>Enter Your Information</legend>
+            <table border="0">
+                <tr>
+                    <td width="30%">Fullname</td>
+                    <td><input type="text" name="fullname" value="Phạm Văn Dũng" required></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input type="text" name="address" value="56/1 BV" required></td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td><input type="text" name="phone" value="0937344xxx" required></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender" value="Nam" checked> Nam
+                        <input type="radio" name="gender" value="Nữ"> Nữ
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td>
+                        <select name="country">
+                            <option value="Việt Nam" selected>Việt Nam</option>
+                            <option value="Mỹ">Mỹ</option>
+                            <option value="Nhật Bản">Nhật Bản</option>
+                            <option value="Hàn Quốc">Hàn Quốc</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Study</td>
+                    <td>
+                        <input type="checkbox" name="study[]" value="PHP & MySQL" checked> PHP & MySQL
+                        <input type="checkbox" name="study[]" value="ASP.NET" checked> ASP.NET <br>
+                        <input type="checkbox" name="study[]" value="CCNA" checked> CCNA
+                        <input type="checkbox" name="study[]" value="Security+" checked> Security+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Note</td>
+                    <td>
+                        <textarea name="note" rows="4">Dòng thứ 1&#10;Dòng thứ 2&#10;Dòng thứ 3</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Gửi">
+                        <input type="reset" value="Hủy">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
