@@ -14,7 +14,7 @@
             margin: 40px auto;
             width: 700px;
             border-collapse: collapse;
-            background-color: #d6e9f8;
+
         }
 
         table.bang th {
